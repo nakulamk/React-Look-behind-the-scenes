@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./LandingPage/Header";
+import Navbar from "./Navbar";
 
 function Header() {
   return (
