@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "./LandingPage/Header";
-
-function Header() {
+import AddUser from "./Components/UserFolder/AddUser";
+function App() {
   return (
-    <div id="main">
-      <Navbar />
+    <div>
+      <AddUser></AddUser>
     </div>
   );
 }
 
-export default Header;
+export default App;
