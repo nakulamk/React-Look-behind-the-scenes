@@ -1,20 +1,17 @@
-import React, { useState } from "react";
-import AddUser from "./Components/UserFolder/AddUser";
-import UserLIst from "./Components/UserFolder/UserLIst";
+import React, { Fragment } from "react";
 // import { useState } from "react";
+import Header from "./Components/Layout/Header";
+import MealsSummary from "./Components/Meals/MealsSummary";
+import AvailableMeals from "./Components/Meals/AvailableMeals";
 function App() {
-  const [UserList, setUserList] = useState([]);
-
-  const onClickOfSubmitButtonPassDataFromCtoP = (userdata) => {
-    setUserList((prevUserlist) => {
-      return [...prevUserlist, userdata];
-    });
-  };
   return (
-    <div>
-      <AddUser onAdduser={onClickOfSubmitButtonPassDataFromCtoP}></AddUser>
-      <UserLIst users={UserList} />
-    </div>
+    <Fragment>
+      <Header />
+      <main>
+        <MealsSummary />
+        <AvailableMeals />
+      </main>
+    </Fragment>
   );
 }
 
